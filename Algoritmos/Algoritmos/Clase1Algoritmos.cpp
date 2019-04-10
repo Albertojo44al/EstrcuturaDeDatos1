@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Factorial(int numero) {
+int factorial(int numero) {
 	int factorial = 1;
 	while (numero > 0) {
 		factorial = factorial * numero;
@@ -10,11 +10,16 @@ int Factorial(int numero) {
 	}
 	return factorial;
 }
-bool ParImpar(int numero) {
-		if (numero % 2 == 0)
+bool parImpar(int numero) {
+		if (numero - 2 == 0) {
 			return true;
-	return false;
+		}
+		else if (numero >= 2) {
+			return parImpar(numero - 2);
+		}
+		return false;
 }
+
 bool numeroPrimo(int numero) {
 	int r = 0;
 	for (int i = 1; i < (numero+1); i++) {
@@ -38,12 +43,12 @@ int main() {
 		case 1:
 			cout << "\nIngrse un numero :";
 			cin >> numero;
-			cout << "\nEl factorial es: " << Factorial(numero);
+			cout << "\nEl factorial es: " << factorial(numero);
 			break;
 		case 2:
 			cout << "\nIngrse un numero :";
 			cin >> numero;
-			ParImpar(numero) ? cout << "\nEs Par" : cout << "\nEs Impar";
+			parImpar(numero) ? cout << "\nEs Par" : cout << "\nEs Impar";
 			break;
 		case 3: 
 			cout << "\nIngrse un numero :";
