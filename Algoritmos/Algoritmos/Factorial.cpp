@@ -2,13 +2,16 @@
 
 using namespace std;
 
+int factorial(int numero) {
+	if (numero == 1)
+		return 1;
+	else
+		return numero * factorial(numero - 1);
+}
+
 int main() {
-	int number, factorial = 1;
+	int number;
 	cout << "Write a number: ";
 	cin >> number;
-	while (number > 0) {
-		factorial = factorial * number;
-		number--;
-	}
-	cout << "the factorial is : " << factorial;
+	cout << "the factorial is : " << factorial(number);
 }
