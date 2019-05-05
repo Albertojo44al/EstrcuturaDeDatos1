@@ -43,6 +43,10 @@ int Toll::Dequeue(double pay) {
 				return 0;
 			}
 		}
+		if (first->getAxes() > 6 && pay == (60)) {
+			Delete();
+			return 0;
+		}
 		return -2;
 	}
 }

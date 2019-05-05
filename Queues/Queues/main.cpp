@@ -13,7 +13,7 @@ int main() {
 	do {
 		cout << "\n\n-------- Toll Menu --------";
 		cout << "\n1. Queue \n2. Dequeue \n3. Print \n4.Exit";
-		cout << "Write an option: ";
+		cout << "\nWrite an option: ";
 		cin >> option;
 		switch (option)
 		{
@@ -22,8 +22,12 @@ int main() {
 			cout << "\n------ Queue ------";
 			cout << "\nNumber of axes: ";
 			cin >> axes;
-			if (t.Queue(new vehicle(axes)) == 0)
-				cout << "Entered vehicle.";
+			if (axes > 1) {
+				if (t.Queue(new vehicle(axes)) == 0)
+					cout << "Entered vehicle.";
+			}
+			else 
+				cout << "number of axes not valid";
 			break;
 		case 2:
 			
