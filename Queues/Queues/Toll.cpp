@@ -19,14 +19,13 @@ int Toll::Queue(vehicle* vehicle) {
 	if (Empty()) {
 		first = vehicle;
 		last = vehicle;
-		return 0;
 	}
 	else {
 		last->next = vehicle;
 		vehicle->prev = last;
 		last = vehicle;
-		return 1;
 	}
+	return 0;
 }
 
 int Toll::Dequeue(double pay) {

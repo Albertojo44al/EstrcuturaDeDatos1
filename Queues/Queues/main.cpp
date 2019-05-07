@@ -12,8 +12,8 @@ int main() {
 
 	do {
 		cout << "\n\n-------- Toll Menu --------";
-		cout << "\n1. Queue \n2. Dequeue \n3. Print \n4.Exit";
-		cout << "\nWrite an option: ";
+		cout << "\n1. Queue \n2. Dequeue \n3. Print \n4. Exit";
+		cout << "\n   Write an option: ";
 		cin >> option;
 		switch (option)
 		{
@@ -44,11 +44,12 @@ int main() {
 			if (dequeue == -1) {
 				cout << "\nThe dequeu is empty";
 			}
-			else if (dequeue == -2) {
+			else if (dequeue == -2) 
 				cout << "\nThe payment is incorrect.";
-			}else {
+			else if (dequeue == -1)
+				cout << "\nThere are not vehicles in the queue.";
+			else 
 				cout << "\nThe payment was complete.";
-			}
 			break;
 		case 3:
 			cout << "\n-------- Print ---------\n";
