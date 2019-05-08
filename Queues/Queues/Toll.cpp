@@ -5,7 +5,7 @@ Toll::Toll() {
 	last = 0;
 }
 
-int Toll::getAxes() {
+int Toll::getAxes() { 
 	return first->getAxes();
 }
 
